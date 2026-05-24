@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="hr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Nikola Tesla</title>
+  <style type="text/css">
+    * { margin: 0; padding: 0; }
+
+    body {
+      background-color: #0e0e1a;
+      color: #ccc8be;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    #header {
+      background-color: #070710;
+      border-bottom: 3px solid #b8922a;
+      padding: 40px 0 32px;
+      text-align: center;
+    }
+    #header h1 {
+      font-size: 52px;
+      font-weight: normal;
+      color: #f0e8d4;
+      letter-spacing: 6px;
+      margin-bottom: 6px;
+    }
+    #header p {
+      font-size: 12px;
+      color: #556;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    /* ── NAV ── */
+    #nav {
+      background-color: #0a0a14;
+      text-align: center;
+      border-bottom: 1px solid #1e1e30;
+    }
+    #nav a {
+      display: inline-block;
+      padding: 11px 18px;
+      color: #7a8a9a;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-right: 1px solid #1e1e30;
+    }
+    #nav a.prvi { border-left: 1px solid #1e1e30; }
+
+    /* ── WRAPPER ── */
+    #sadrzaj {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    /* ── HERO: text + portrait side by side ── */
+    #hero-tablica {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    #hero-tablica td.slika {
+      width: 200px;
+      vertical-align: top;
+      padding-right: 28px;
+    }
+    #hero-tablica td.slika img {
+      width: 200px;
+      border: 3px solid #b8922a;
+      display: block;
+    }
+    #hero-tablica td.slika p {
+      font-size: 11px;
+      color: #556;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+    }
+    #hero-tablica td.tekst { vertical-align: top; }
+    #hero-tablica td.tekst blockquote {
+      border-left: 3px solid #b8922a;
+      padding: 4px 16px;
+      font-style: italic;
+      font-size: 17px;
+      color: #aaa090;
+      margin-bottom: 14px;
+    }
+    #hero-tablica td.tekst p { color: #aaa090; margin-bottom: 10px; }
+
+    /* ── SECTION HEADINGS ── */
+    h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #c8b880;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .crta {
+      width: 36px; height: 2px;
+      background-color: #b8922a;
+      margin-bottom: 18px;
+    }
+
+    hr { border: none; border-top: 1px solid #1e1e30; margin: 36px 0; }
+
+    /* ── PHOTO STRIP (using table) ── */
+    #foto-traka {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 10px 0;
+      margin: 20px 0 8px;
+    }
+    #foto-traka td {
+      width: 33%;
+      text-align: center;
+      vertical-align: top;
+    }
+    #foto-traka img {
+      width: 100%;
+      display: block;
+      border: 2px solid #2a2a40;
+    }
+    #foto-traka p {
+      font-size: 11px;
+      color: #445;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* ── TIMELINE using definition list ── */
+    dl#kronologija { margin-top: 4px; }
+    dl#kronologija dt {
+      float: left;
+      clear: left;
+      width: 54px;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      color: #b8922a;
+      font-weight: bold;
+      padding: 7px 0;
+    }
+    dl#kronologija dd {
+      margin-left: 64px;
+      padding: 7px 0;
+      border-bottom: 1px solid #181828;
+      color: #9090a0;
+      font-size: 14px;
+    }
+    dl#kronologija dd strong { color: #c8c0b0; }
+
+    /* ── INVENTIONS: borderless table ── */
+    table#izumi {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    table#izumi td {
+      width: 50%;
+      vertical-align: top;
+      padding: 12px 16px 12px 0;
+      border-bottom: 1px solid #181828;
+    }
+    table#izumi td:last-child { padding-right: 0; padding-left: 16px; border-left: 1px solid #181828; }
+    table#izumi b { color: #c8b880; display: block; margin-bottom: 3px; font-size: 13px; letter-spacing: 1px; }
+    table#izumi span { color: #6a6a80; font-size: 13px; }
+
+    /* ── STATS: background-colored cells ── */
+    table#statistike {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      text-align: center;
+    }
+    table#statistike td {
+      padding: 18px 8px;
+      border: 1px solid #1a1a2e;
+      background-color: #0d0d1e;
+    }
+    table#statistike .broj {
+      display: block;
+      font-size: 30px;
+      color: #b8922a;
+      font-family: "Courier New", monospace;
+    }
+    table#statistike .naziv {
+      display: block;
+      font-size: 10px;
+      color: #445;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── FOOTER ── */
+    #podnozje {
+      background-color: #070710;
+      border-top: 3px solid #b8922a;
+      text-align: center;
+      padding: 22px;
+      font-size: 11px;
+      color: #334;
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Zaglavlje -->
+<div id="header">
+  <h1>Nikola Tesla</h1>
+  <p>Smiljan, 1856. &mdash; New York, 1943.</p>
+</div>
+
+<!-- Navigacija -->
+<div id="nav">
+  <a class="prvi" href="#zivot">&#381;ivot</a>
+  <a href="#galerija">Galerija</a>
+  <a href="#izumi">Izumi</a>
+  <a href="#kronologija">Kronologija</a>
+  <a href="#nasljedje">Naslje&#273;e</a>
+</div>
+
+<div id="sadrzaj">
+
+  <!-- Hero: portret + uvod -->
+  <div id="zivot">
+    <table id="hero-tablica" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="slika">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/N.Tesla.JPG/300px-N.Tesla.JPG"
+               alt="Portret Nikole Tesle" width="200">
+          <p>Portret, oko 1890.</p>
+        </td>
+        <td class="tekst">
+          <blockquote>
+            &bdquo;Sada&#353;njost je njihova; budu&#263;nost, za koju sam zaista radio, je moja.&ldquo;
+          </blockquote>
+          <p>
+            Nikola Tesla ro&#273;en je 10. srpnja 1856. u Smiljanu u dana&#353;njoj Hrvatskoj.
+            Sin pravoslavnog sve&#263;enika, od djetinjstva je pokazivao izniman talent za
+            matematiku i tehniku. U New York je stigao 1884. s nekoliko centi u d&#382;epu
+            i oti&#353;ao prijavio gotovo 300 patenata.
+          </p>
+          <p>
+            Pobijedio je u &bdquo;Ratu struja&ldquo; protiv Edisona zajedno s
+            Westinghouseom &mdash; danas cijeli svijet koristi njegov sustav
+            izmjeni&#269;ne struje.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- Galerija -->
+  <div id="galerija">
+    <h2>Galerija</h2>
+    <div class="crta"></div>
+
+    <table id="foto-traka" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Smiljan_birthplace_of_Nikola_Tesla.jpg/400px-Smiljan_birthplace_of_Nikola_Tesla.jpg"
+               alt="Rodno mjesto u Smiljanu" width="260">
+          <p>Rodno mjesto, Smiljan</p>
+        </td>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tesla_coil_colorado.jpg/400px-Tesla_coil_colorado.jpg"
+               alt="Tesla u Colorado Springsu, 1899." width="260">
+          <p>Laboratorij, Colorado Springs, 1899.</p>
+        </td>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tesla_Broadcast_Tower_1904.jpeg/320px-Tesla_Broadcast_Tower_1904.jpeg"
+               alt="Toranj Wardenclyffe, 1904." width="260">
+          <p>Toranj Wardenclyffe, 1904.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- Izumi -->
+  <div id="izumi">
+    <h2>Klju&#269;ni izumi</h2>
+    <div class="crta"></div>
+
+    <table cellspacing="0" cellpadding="0" id="izumi">
+      <tr>
+        <td>
+          <b>Motor na izmjeni&#269;nu struju</b>
+          <span>Temelj moderne industrije &mdash; svaki elektri&#269;ni motor danas radi po Teslinom na&#269;elu.</span>
+        </td>
+        <td>
+          <b>Teslin transformator</b>
+          <span>Rezonantni transformator visokih napona, jo&#353; u upotrebi u radiotehnici i medicini.</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Radio</b>
+          <span>Vrhovni sud SAD-a potvrdio Teslin prioritet nad Marconijem &mdash; 1943. godine.</span>
+        </td>
+        <td>
+          <b>Daljinsko upravljanje</b>
+          <span>Prvi daljinski upravljani brod demonstriran u Madison Square Gardenu, 1898.</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Be&#382;i&#269;ni prijenos energije</b>
+          <span>Toranj Wardenclyffe &mdash; vizija globalne be&#382;i&#269;ne mre&#382;e, propala zbog povla&#269;enja investitora.</span>
+        </td>
+        <td>
+          <b>Neonska rasvjeta</b>
+          <span>Fluorescentne i neonske cijevi demonstrirane na Svjetskoj izlo&#382;bi u Chicagu, 1893.</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- Kronologija -->
+  <div id="kronologija">
+    <h2>Kronologija</h2>
+    <div class="crta"></div>
+
+    <dl id="kronologija">
+      <dt>1856.</dt><dd><strong>Ro&#273;en</strong> u Smiljanu, Austrijsko Carstvo, 10. srpnja.</dd>
+      <dt>1882.</dt><dd><strong>Smi&#353;lja rotirajuce magnetsko polje</strong> za &#353;etnje Budimpe&#353;tom.</dd>
+      <dt>1884.</dt><dd><strong>Dolazi u New York</strong> i zapo&#353;ljava se kod Edisona.</dd>
+      <dt>1891.</dt><dd><strong>Izumljuje Teslin transformator</strong>; demonstrira be&#382;i&#269;nu rasvjetu.</dd>
+      <dt>1893.</dt><dd><strong>Osvjetljava Svjetsku izlo&#382;bu</strong> u Chicagu izmjeni&#269;nom strujom.</dd>
+      <dt>1895.</dt><dd><strong>Elektrana Nijagarskih slapova</strong> napaja grad Buffalo.</dd>
+      <dt>1899.</dt><dd><strong>Colorado Springs</strong> &mdash; munje od 30 m, eksperimenti s be&#382;i&#269;nim prijenosom.</dd>
+      <dt>1901.</dt><dd><strong>Po&#269;inje gradnju tornja Wardenclyffe</strong>; projekt propada 1903.</dd>
+      <dt>1943.</dt><dd><strong>Umire</strong> sam u New Yorkeru. Vrhovni sud vra&#263;a mu radiopatente.</dd>
+    </dl>
+    <div style="clear:both;"></div>
+  </div>
+
+  <hr>
+
+  <!-- Naslijeđe + statistike -->
+  <div id="nasljedje">
+    <h2>Naslje&#273;e</h2>
+    <div class="crta"></div>
+
+    <p style="color:#9090a0; max-width:640px;">
+      Tesla je umro gotovo bez prebijene pare, no 20. stolje&#263;e izgra&#273;eno je na njegovu radu.
+      Godine 1960. SI jedinica gusto&#263;e magnetskog toka nazvana je <em>teslom</em> (T) u njegovu &#269;ast.
+      U popularnoj kulturi simbol je usamljenog vizionarskog genija &mdash; ispred svoga vremena.
+    </p>
+
+    <table id="statistike" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><span class="broj">~300</span><span class="naziv">Patenata</span></td>
+        <td><span class="broj">26</span><span class="naziv">Zemalja</span></td>
+        <td><span class="broj">86</span><span class="naziv">Godina &#382;ivota</span></td>
+        <td><span class="broj">1960.</span><span class="naziv">SI jedinica</span></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- Podnožje -->
+<div id="podnozje">
+  <p>&#9889; &nbsp; NIKOLA TESLA &nbsp; 1856. &ndash; 1943. &nbsp; &#9889;</p>
+  <p style="margin-top:6px;">Po&#269;ast &#269;ovjeku koji je elektrificirao svijet.</p>
+</div>
+
+</body>
+</html>
